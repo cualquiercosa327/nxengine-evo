@@ -307,6 +307,7 @@ char blocked_wall;
 	if (blocked_wall)
 	{	// we can't actually move...so reset Y position
 		o->y = oldy;
+		o->xinertia = 0;
 	}
 	else
 	{	// can move...complete the move by setting the X position too
