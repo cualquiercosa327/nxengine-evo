@@ -33,6 +33,8 @@ void _sound_change(ODItem *item, int dir);
 void _sound_get(ODItem *item);
 void _music_change(ODItem *item, int dir);
 void _music_get(ODItem *item);
+void _framerate_change(ODItem *item, int dir);
+void _framerate_get(ODItem *item);
 static void EnterControlsMenu(ODItem *item, int dir);
 static void _upd_control(ODItem *item);
 static void _edit_control(ODItem *item, int dir);
@@ -176,6 +178,10 @@ Dialog *dlg = opt.dlg;
 	dlg->AddItem("Sound: ", _sound_change, _sound_get, -1, OD_CHOICE);
 	
 	dlg->AddSeparator();
+
+	dlg->AddItem("Framerate: ", _framerate_change, _framerate_get, -1, OD_CHOICE);
+
+	dlg->AddSeparator();
 	dlg->AddDismissalItem();
 	
 	dlg->SetSelection(opt.mm_cursel);
@@ -304,6 +310,24 @@ void _music_get(ODItem *item)
 {
 	static const char *strs[] = { "Off", "On", "Boss Only" };
 	strcpy(item->suffix, strs[settings->music_enabled]);
+}
+
+
+void _framerate_change(ODItem *item, int dir)
+{
+	settings->framerate = !settings->framerate;
+	if (settings->framerate)
+		GAME_FPS = 60;
+	else
+		GAME_FPS = 50;
+
+	sound(SND_MENU_SELECT);
+}
+
+void _framerate_get(ODItem *item)
+{
+	static const char *strs[] = { "50", "60" };
+	strcpy(item->suffix, strs[settings->framerate]);
 }
 
 

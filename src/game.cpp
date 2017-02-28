@@ -9,6 +9,7 @@
 #include "pause/options.h"
 #include "inventory.h"
 #include "map_system.h"
+#include "settings.h"
 
 #include "profile.h"
 #include "ObjManager.h"
@@ -60,6 +61,8 @@ TextBox textbox;
 DebugConsole console;
 ObjProp objprop[OBJ_LAST];
 
+int GAME_FPS;
+
 // init Game object: only called once during startup
 bool Game::init()
 {
@@ -78,7 +81,12 @@ int i;
 			objprop[i].sprite = SPR_NULL;
 		#endif
 	}
-	
+
+	if (settings->framerate)
+		GAME_FPS = 60;
+	else
+		GAME_FPS = 50;
+
 	AssignSprites();		// auto-generated function to assign sprites to objects
 	AssignExtraSprites();	// assign rest of sprites (to be replaced at some point)
 	
