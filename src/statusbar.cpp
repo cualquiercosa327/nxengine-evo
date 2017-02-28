@@ -368,9 +368,11 @@ void niku_draw(int value, bool force_white)
 	
 	draw_sprite(NIKU_X, NIKU_Y, SPR_NIKU_CLOCK, clkframe);
 	
-	int mins = (value / 3000);		// the game runs at 50 fps
-	int secs = (value / 50) % 60;
-	int tens = (value / 5) % 10;
+	int mins, secs, tens;
+
+	mins = (value / (GAME_FPS * 60));		// the game runs at 50 fps
+	secs = (value / GAME_FPS) % 60;
+	tens = (value / (GAME_FPS / 10)) % 10;
 	
 	DrawNumber(NIKU_X, NIKU_Y, mins);
 	DrawTwoDigitNumber(NIKU_X+36, NIKU_Y, secs);

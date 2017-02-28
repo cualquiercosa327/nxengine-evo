@@ -19,6 +19,8 @@ struct Settings
 	
 	bool skip_intro;
 	bool rumble;
+
+	bool framerate;
 	
 	in_action input_mappings[INPUT_COUNT];
 };

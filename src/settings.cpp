@@ -9,7 +9,7 @@
 #include "input.h"
 #include "common/stat.h"
 
-const uint32_t SETTINGS_VERSION = ( ( '1' << 24 ) + ( 'S' << 16 ) + ( 'X' << 8 ) + 'N' );		// serves as both a version and magic
+const uint32_t SETTINGS_VERSION = ( ( '0' << 24 ) + ( 'N' << 16 ) + ( 'W' << 8 ) + 'C' );		// serves as both a version and magic
 
 Settings normal_settings;
 Settings *settings = &normal_settings;
@@ -62,6 +62,7 @@ bool settings_load(Settings *setfile)
 		setfile->sound_enabled = true;
 		setfile->music_enabled = 1;	// both Boss and Regular music
 		setfile->rumble = false;
+		setfile->framerate = false;
 		
 		return 1;
 	}
