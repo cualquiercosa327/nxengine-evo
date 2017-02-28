@@ -316,10 +316,7 @@ void _music_get(ODItem *item)
 void _framerate_change(ODItem *item, int dir)
 {
 	settings->framerate = !settings->framerate;
-	if (settings->framerate)
-		GAME_FPS = 60;
-	else
-		GAME_FPS = 50;
+	game.fps = settings->framerate ? 60 : 50;
 
 	sound(SND_MENU_SELECT);
 }

@@ -16,8 +16,6 @@ enum Directions
 	CENTER	= 5
 };
 
-extern int GAME_FPS;
-
 // for UpdateBlockedStates
 #define RIGHTMASK		0x01
 #define LEFTMASK		0x02
@@ -69,6 +67,8 @@ struct Game
 	int mapname_x;
 	
 	uint32_t counter;	// Nikumaru counter value
+
+	int fps;
 	
 	struct
 	{

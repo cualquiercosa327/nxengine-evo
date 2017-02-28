@@ -37,7 +37,7 @@ int fps = 0;
 static int fps_so_far = 0;
 static uint32_t fpstimer = 0;
 
-#define GAME_WAIT			((1000 + (GAME_FPS / 2))/GAME_FPS)	// sets framerate
+#define GAME_WAIT			((1000 + (game.fps / 2))/game.fps)	// sets framerate
 int framecount = 0;
 bool freezeframe = false;
 int flipacceltime = 0;
