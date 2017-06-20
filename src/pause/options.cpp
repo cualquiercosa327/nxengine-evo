@@ -234,8 +234,8 @@ int newres;
 	if (!Graphics::SetResolution(newres, true))
 	{
 		settings->resolution = newres;
-		Graphics::SetFullscreen(false);
-		Graphics::SetFullscreen(settings->fullscreen);
+//		Graphics::SetFullscreen(false);
+//		Graphics::SetFullscreen(settings->fullscreen);
 		opt.dlg->UpdateSizePos();
 	}
 	else

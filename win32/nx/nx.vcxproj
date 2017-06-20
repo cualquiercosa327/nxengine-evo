@@ -235,7 +235,6 @@
     <ClCompile Include="..\..\src\ai\weed\weed.cpp" />
     <ClCompile Include="..\..\src\autogen\AssignSprites.cpp" />
     <ClCompile Include="..\..\src\caret.cpp" />
-    <ClCompile Include="..\..\src\common\DBuffer.cpp" />
     <ClCompile Include="..\..\src\common\InitList.cpp" />
     <ClCompile Include="..\..\src\common\misc.cpp" />
     <ClCompile Include="..\..\src\common\stat.cpp" />
@@ -253,7 +252,6 @@
     <ClCompile Include="..\..\src\graphics\graphics.cpp" />
     <ClCompile Include="..\..\src\graphics\nxsurface.cpp" />
     <ClCompile Include="..\..\src\graphics\pngfuncs.cpp" />
-    <ClCompile Include="..\..\src\graphics\safemode.cpp" />
     <ClCompile Include="..\..\src\graphics\screenshot.cpp" />
     <ClCompile Include="..\..\src\graphics\sprites.cpp" />
     <ClCompile Include="..\..\src\graphics\tileset.cpp" />
@@ -372,7 +370,6 @@
     <ClInclude Include="..\..\src\caret.h" />
     <ClInclude Include="..\..\src\common\basics.h" />
     <ClInclude Include="..\..\src\common\bufio.h" />
-    <ClInclude Include="..\..\src\common\DBuffer.h" />
     <ClInclude Include="..\..\src\common\InitList.h" />
     <ClInclude Include="..\..\src\common\llist.h" />
     <ClInclude Include="..\..\src\common\misc.h" />
@@ -392,7 +389,6 @@
     <ClInclude Include="..\..\src\graphics\nxsurface.h" />
     <ClInclude Include="..\..\src\graphics\nx_icon.h" />
     <ClInclude Include="..\..\src\graphics\pngfuncs.h" />
-    <ClInclude Include="..\..\src\graphics\safemode.h" />
     <ClInclude Include="..\..\src\graphics\screenshot.h" />
     <ClInclude Include="..\..\src\graphics\sprites.h" />
     <ClInclude Include="..\..\src\graphics\tileset.h" />
